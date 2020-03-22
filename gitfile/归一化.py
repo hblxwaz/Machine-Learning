@@ -1,3 +1,9 @@
+
+'''
+
+有些情况每个样本的每个特征值具体的值并不重要，但是每个样本特征值的占比更加重要
+所以归一化即是用每个样本的每个特征值除以该样本各个特征值绝对值的总和。变换后的样本矩阵，每个样本的特征值绝对值之和为1。
+'''
 import numpy as np
 import sklearn.preprocessing as sp
 
@@ -18,7 +24,7 @@ for row in nor_samples:
     print(row)
 print(nor_samples)
 # 归一化处理
-
+# 归一化相关API
 nor_samples = sp.normalize(raw_samples,norm='l2')
 print(nor_samples)
 print(abs(nor_samples).sum(axis=1))
