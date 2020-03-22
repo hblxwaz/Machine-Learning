@@ -17,3 +17,8 @@ for row in nor_samples:
 
     print(row)
 print(nor_samples)
+# 归一化处理
+
+nor_samples = sp.normalize(raw_samples,norm='l2')
+print(nor_samples)
+print(abs(nor_samples).sum(axis=1))
